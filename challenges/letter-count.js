@@ -31,3 +31,16 @@
 */
 
 // YOUR CODE HERE
+var result = {};
+function letterCount(word){
+  var letters = word.split('');
+  for (var i = 0; i < letters.length; i++) {
+        var letterToSearch = letters[i];
+        if(result[letterToSearch]) {
+          result[letterToSearch] = letterToSearch + 1;
+        } else {
+          result[letterToSearch] = 1;
+        }
+  }
+  return result;
+}
